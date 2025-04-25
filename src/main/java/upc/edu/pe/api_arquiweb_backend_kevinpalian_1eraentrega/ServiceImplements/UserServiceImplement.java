@@ -15,4 +15,14 @@ public class UserServiceImplement implements IUserService {
 
     @Override
     public List<User> list() {return uR.findAll();}
+
+    @Override
+    public void insert(User u) {
+
+    }
+
+    @Override
+    public User searchbyId(int id) {
+        return null;
+    }
 }

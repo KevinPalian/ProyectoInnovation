@@ -6,5 +6,8 @@ import java.util.List;
 
 public interface IUserService {
     public List<User> list();
+    public void insert(User u);
+
+    public User searchbyId(int id);
 
 }
