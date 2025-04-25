@@ -2,12 +2,11 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.FlashcardDTO;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.UserDTO;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IFlashcardService;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcard;
+
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,6 +23,31 @@ public class FlashcardController {
             ModelMapper m = new ModelMapper();
             return m.map(w, FlashcardDTO.class);
         }).collect(Collectors.toList());
+    }
+
+    @PostMapping
+    public void insertar(@RequestBody FlashcardDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Flashcard f = m.map(dto, Flashcard.class);
+        fS.insert(f);
+    }
+
+    @GetMapping("/{id}")
+    public FlashcardDTO listarId(@PathVariable("id") int id) {
+        ModelMapper m = new ModelMapper();
+        FlashcardDTO dto = m.map(fS.searchbyId(id), FlashcardDTO.class);
+        return dto;
+    }
+
+    @PutMapping
+    public void modificar(@RequestBody FlashcardDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Flashcard f = m.map(dto, Flashcard.class);
+        fS.update(f);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") int id) {
+        fS.delete(id);
     }
 
 }

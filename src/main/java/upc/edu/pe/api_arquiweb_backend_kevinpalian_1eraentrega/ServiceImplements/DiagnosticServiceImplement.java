@@ -17,4 +17,24 @@ public class DiagnosticServiceImplement implements IDiagnosticService {
     public List<Diagnostic> list() {
         return dR.findAll();
     }
+
+    @Override
+    public void insert(Diagnostic d) {
+        dR.save(d);
+    }
+
+    @Override
+    public Diagnostic searchbyId(int id) {
+        return dR.findById(id).orElse(new Diagnostic());
+    }
+
+    @Override
+    public void update(Diagnostic d) {
+        dR.save(d);
+    }
+
+    @Override
+    public void delete(int id) {
+        dR.deleteById(id);
+    }
 }

@@ -6,4 +6,10 @@ import java.util.List;
 
 public interface IDiagnosticService {
     public List<Diagnostic> list();
+    public void insert(Diagnostic d);
+
+    public Diagnostic searchbyId(int id);
+    public void update(Diagnostic d);
+
+    public void delete(int id);
 }

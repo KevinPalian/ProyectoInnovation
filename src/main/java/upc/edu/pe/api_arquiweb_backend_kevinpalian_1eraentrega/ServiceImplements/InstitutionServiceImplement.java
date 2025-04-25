@@ -17,4 +17,24 @@ public class InstitutionServiceImplement implements IInstitutionService {
     public List<Institution> list() {
         return iR.findAll();
     }
+
+    @Override
+    public void insert(Institution i) {
+        iR.save(i);
+    }
+
+    @Override
+    public Institution searchById(int id) {
+        return iR.findById(id).orElse(new Institution());
+    }
+
+    @Override
+    public void update(Institution i) {
+        iR.save(i);
+    }
+
+    @Override
+    public void delete(int id) {
+        iR.deleteById(id);
+    }
 }

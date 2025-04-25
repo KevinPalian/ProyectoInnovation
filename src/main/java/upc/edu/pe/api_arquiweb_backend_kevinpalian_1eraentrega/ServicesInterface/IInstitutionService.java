@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface IInstitutionService {
     public List<Institution> list();
+    public void insert(Institution i);
+    public Institution searchById(int id);
+    public void update(Institution i);
+    public void delete(int id);
 }

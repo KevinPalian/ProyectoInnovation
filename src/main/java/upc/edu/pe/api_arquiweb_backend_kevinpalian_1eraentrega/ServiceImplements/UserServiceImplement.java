@@ -18,11 +18,21 @@ public class UserServiceImplement implements IUserService {
 
     @Override
     public void insert(User u) {
-
+        uR.save(u);
     }
 
     @Override
     public User searchbyId(int id) {
-        return null;
+        return uR.findById(id).orElse(new User());
+    }
+
+    @Override
+    public void update(User u) {
+        uR.save(u);
+    }
+
+    @Override
+    public void delete(int id) {
+        uR.deleteById(id);
     }
 }

@@ -15,4 +15,24 @@ public class FlashcardServiceImplement implements IFlashcardService {
 
     @Override
     public List<Flashcard> list() {return fR.findAll(); }
+
+    @Override
+    public void insert(Flashcard f) {
+        fR.save(f);
+    }
+
+    @Override
+    public Flashcard searchbyId(int id) {
+        return fR.findById(id).orElse(new Flashcard());
+    }
+
+    @Override
+    public void update(Flashcard f) {
+        fR.save(f);
+    }
+
+    @Override
+    public void delete(int id) {
+        fR.deleteById(id);
+    }
 }

@@ -15,4 +15,24 @@ public class Flashcard_SuggestionServiceImplement implements IFlashcard_Suggesti
 
     @Override
     public List<flashcard_suggestion>list() {return fsR.findAll();}
+
+    @Override
+    public void insert(flashcard_suggestion fs) {
+        fsR.save(fs);
+    }
+
+    @Override
+    public flashcard_suggestion searchbyId(int id) {
+        return fsR.findById(id).orElse(new flashcard_suggestion());
+    }
+
+    @Override
+    public void update(flashcard_suggestion fs) {
+        fsR.save(fs);
+    }
+
+    @Override
+    public void delete(int id) {
+        fsR.deleteById(id);
+    }
 }
