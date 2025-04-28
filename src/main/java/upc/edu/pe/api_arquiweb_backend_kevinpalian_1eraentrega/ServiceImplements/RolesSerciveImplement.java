@@ -26,4 +26,19 @@ rR.save(r);
     public Roles ListId(int id) {
         return rR.findById(id).orElse(new Roles());
     }
+//-----------------------------------
+    @Override
+    public Roles searchById(int id) {
+        return null;
+    }
+
+    @Override
+    public void update(Roles r) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+    }
 }

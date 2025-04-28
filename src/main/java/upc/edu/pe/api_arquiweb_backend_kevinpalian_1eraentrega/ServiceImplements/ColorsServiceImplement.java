@@ -26,4 +26,19 @@ public class ColorsServiceImplement implements IColorsService {
     public Colors ListId(int id) {
         return cL.findById(id).orElse(new Colors());
     }
+//-------------------------------------
+    @Override
+    public Colors searchById(int id) {
+        return null;
+    }
+
+    @Override
+    public void update(Colors c) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+    }
 }

@@ -35,4 +35,20 @@ public class ColorsController {
         ColorsDTO dto=m.map(cL.ListId(id),ColorsDTO.class);
         return dto;
 }
+
+    @GetMapping("/{idlist}")
+    public ColorsDTO listarId(@PathVariable("id") int id) {
+        ModelMapper m = new ModelMapper();
+                ColorsDTO dto = m.map(cL.searchById(id), ColorsDTO.class);
+        return dto;
+    }
+
+    @PutMapping
+    public void modificar(@RequestBody ColorsDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Colors i = m.map(dto, Colors.class);
+        cL.update(i);
+    }
+    @DeleteMapping("/{iddelit}")
+    public void eliminar(@PathVariable("id") int id) { cL.delete(id); }
 }

@@ -37,4 +37,20 @@ private List<RolesDTO> Listar(){
     RolesDTO dto= m.map(rR.ListId(id),RolesDTO.class);
     return dto;
 }
+    @GetMapping("/{idlist}")
+    public RolesDTO listarId(@PathVariable("id") int id) {
+        ModelMapper m = new ModelMapper();
+        RolesDTO dto = m.map(rR.searchById(id), RolesDTO.class);
+        return dto;
+    }
+
+    @PutMapping
+    public void modificar(@RequestBody RolesDTO dto) {
+        ModelMapper m = new ModelMapper();
+        Roles r = m.map(dto, Roles.class);
+        rR.update(r);
+    }
+
+    @DeleteMapping("/{iddelit}")
+    public void eliminar(@PathVariable("id") int id) { rR.delete(id); }
 }
