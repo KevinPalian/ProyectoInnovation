@@ -3,7 +3,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name="User")
+@Table(name="Institution")
 public class Institution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,10 +12,10 @@ public class Institution {
     @Column(name = "nameInstitution", length = 250, nullable = false)
     private String nameInstitution;
 
-    @Column(name = "nameInstitution", length = 25, nullable = false)
+    @Column(name = "rucInstitution", length = 25, nullable = false)
     private String rucInstitution;
 
-    @Column(name = "nameInstitution", length = 15, nullable = false)
+    @Column(name = "code_securityInstitution", length = 15, nullable = false)
     private String code_securityInstitution;
 
     @ManyToOne
