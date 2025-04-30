@@ -1,10 +1,10 @@
-package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServiceImplements;
+package pe.edu.upc.demo3157api.servicesimplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.ImagenesFlashcard;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories.IFlashcardImgRepository;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IFlashcardImgService;
+import pe.edu.upc.demo3157api.entities.FlashcardImg;
+import pe.edu.upc.demo3157api.repositories.IFlashcardImgRepository;
+import pe.edu.upc.demo3157api.servicesinterfaces.IFlashcardImgService;
 
 import java.util.List;
 @Service
@@ -13,23 +13,23 @@ public class FlashcardImgServiceImplement implements IFlashcardImgService {
     private IFlashcardImgRepository iR;
 
     @Override
-    public List<ImagenesFlashcard> list() {
+    public List<FlashcardImg> list() {
         return iR.findAll();
     }
 
     @Override
-    public void insert(ImagenesFlashcard i) {
+    public void insert(FlashcardImg i) {
         iR.save(i);
     }
 
     @Override
-    public void update(ImagenesFlashcard i) { iR.save(i); }
+    public void update(FlashcardImg i) { iR.save(i); }
 
     @Override
     public void delete(int id) { iR.deleteById(id); }
 
     @Override
-    public ImagenesFlashcard searchById(int id) {
-        return iR.findById(id).orElse(new ImagenesFlashcard());
+    public FlashcardImg searchById(int id) {
+        return iR.findById(id).orElse(new FlashcardImg());
     }
 }
