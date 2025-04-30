@@ -1,6 +1,6 @@
-package pe.edu.upc.demo3157api.servicesinterfaces;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface;
 
-import pe.edu.upc.demo3157api.entities.Comentary;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary;
 import java.util.List;
 
 public interface IComentaryService {
