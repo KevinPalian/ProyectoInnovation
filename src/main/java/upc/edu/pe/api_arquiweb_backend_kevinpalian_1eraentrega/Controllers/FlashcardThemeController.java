@@ -1,11 +1,11 @@
-package pe.edu.upc.demo3157api.controllers;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.demo3157api.dtos.FlashcardThemeDTO;
-import pe.edu.upc.demo3157api.entities.FlashcardTheme;
-import pe.edu.upc.demo3157api.servicesinterfaces.IFlashcardThemeService;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.FlashcardThemeDTO;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.FlashcardTheme;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IFlashcardThemeService;
 
 import java.util.List;
 import java.util.stream.Collectors;
