@@ -1,4 +1,4 @@
-package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.controllers;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

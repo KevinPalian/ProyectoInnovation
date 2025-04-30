@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/institucion")
+@RequestMapping("/institucion_sugerencia")
 public class Flashcard_SuggestionController {
     @Autowired
     private IFlashcard_SuggestionService fsS;
