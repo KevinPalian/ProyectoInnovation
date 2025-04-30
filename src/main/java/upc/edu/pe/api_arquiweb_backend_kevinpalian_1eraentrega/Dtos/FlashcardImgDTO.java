@@ -1,4 +1,4 @@
-package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
+package pe.edu.upc.demo3157api.dtos;
 
 public class FlashcardImgDTO {
     private int idFlashcardImg;
