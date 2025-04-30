@@ -1,8 +1,8 @@
-package pe.edu.upc.demo3157api.repositories;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pe.edu.upc.demo3157api.entities.Comentary;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary;
 @Repository
 public interface IComentaryRepository extends JpaRepository<Comentary, Integer> {
 }
