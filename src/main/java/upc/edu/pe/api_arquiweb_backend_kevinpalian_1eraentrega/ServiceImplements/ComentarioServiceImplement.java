@@ -1,10 +1,10 @@
-package pe.edu.upc.demo3157api.servicesimplements;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServiceImplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.demo3157api.entities.Comentario;
-import pe.edu.upc.demo3157api.repositories.IComentarioRepository;
-import pe.edu.upc.demo3157api.servicesinterfaces.IComentarioService;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentario;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories.IComentarioRepository;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IComentarioService;
 
 import java.util.List;
 @Service

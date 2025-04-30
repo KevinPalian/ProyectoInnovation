@@ -1,4 +1,4 @@
-package pe.edu.upc.demo3157api.dtos;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
 //import pe.edu.upc.demo3157api.entities.User
 

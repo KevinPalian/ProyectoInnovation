@@ -1,6 +1,5 @@
-package pe.edu.upc.demo3157api.servicesinterfaces;
-
-import pe.edu.upc.demo3157api.entities.ImagenesFlashcard;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.ImagenesFlashcard;
 
 import java.util.List;
 

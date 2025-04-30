@@ -1,8 +1,8 @@
-package pe.edu.upc.demo3157api.repositories;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pe.edu.upc.demo3157api.entities.ImagenesFlashcard;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.ImagenesFlashcard;
 @Repository
 public interface IFlashcardImgRepository extends JpaRepository<ImagenesFlashcard, Integer> {
 }

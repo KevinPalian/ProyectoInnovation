@@ -1,10 +1,11 @@
-package pe.edu.upc.demo3157api.repositories;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import pe.edu.upc.demo3157api.entities.TemaFlashcard;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.TemaFlashcard;
+
 
 import java.util.List;
 

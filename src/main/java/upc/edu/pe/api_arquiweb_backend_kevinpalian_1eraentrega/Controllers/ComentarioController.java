@@ -1,11 +1,11 @@
-package pe.edu.upc.demo3157api.controllers;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.demo3157api.dtos.ComentarioDTO;
-import pe.edu.upc.demo3157api.entities.Comentario;
-import pe.edu.upc.demo3157api.servicesinterfaces.IComentarioService;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.ComentarioDTO;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentario;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IComentarioService;
 
 import java.util.List;
 import java.util.stream.Collectors;
