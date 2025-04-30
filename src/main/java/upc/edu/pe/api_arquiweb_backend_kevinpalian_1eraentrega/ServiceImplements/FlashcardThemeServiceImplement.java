@@ -1,10 +1,10 @@
-package pe.edu.upc.demo3157api.servicesimplements;
+package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServiceImplements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upc.demo3157api.entities.FlashcardTheme;
-import pe.edu.upc.demo3157api.repositories.IFlashcardThemeRepository;
-import pe.edu.upc.demo3157api.servicesinterfaces.IFlashcardThemeService;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.FlashcardTheme;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories.IFlashcardThemeRepository;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IFlashcardThemeService;
 
 import java.util.List;
 @Service
