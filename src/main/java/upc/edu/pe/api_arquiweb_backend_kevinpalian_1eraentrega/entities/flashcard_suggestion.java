@@ -11,7 +11,7 @@ public class flashcard_suggestion {
     @Column(name="reason_suggestionSFlashcard", nullable=false)
     private String reason_suggestionSFlashcard;
 
-    @Column(name="reason_suggestionSFlashcard",length = 150, nullable=false)
+    @Column(name="progress_basedSFlashcard",length = 150, nullable=false)
     private String progress_basedSFlashcard;
 
     @ManyToOne

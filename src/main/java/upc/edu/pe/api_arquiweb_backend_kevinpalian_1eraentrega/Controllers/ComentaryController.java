@@ -3,39 +3,39 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.ComentarioDTO;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentario;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IComentarioService;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.ComentaryDTO;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IComentaryService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/comentarios")
-public class ComentarioController {
+public class ComentaryController {
     @Autowired
-    private IComentarioService cS;
+    private IComentaryService cS;
 
     @GetMapping("/lista")
-    public List<ComentarioDTO> listar()
+    public List<ComentaryDTO> listar()
     {
         return cS.list().stream().map(y->{
             ModelMapper m = new ModelMapper();
-            return m.map(y,ComentarioDTO.class);
+            return m.map(y,ComentaryDTO.class);
         }).collect(Collectors.toList());
     }
 
     @PostMapping("/prueba")
-    public void insertar(@RequestBody ComentarioDTO dto) {
+    public void insertar(@RequestBody ComentaryDTO dto) {
         ModelMapper m = new ModelMapper();
-        Comentario c = m.map(dto, Comentario.class);
+        Comentary c = m.map(dto, Comentary.class);
         cS.insert(c);
     }
 
     @PutMapping
-    public void modificar(@RequestBody ComentarioDTO dto) {
+    public void modificar(@RequestBody ComentaryDTO dto) {
         ModelMapper m = new ModelMapper();
-        Comentario c = m.map(dto, Comentario.class);
+        Comentary c = m.map(dto, Comentary.class);
         cS.update(c);
     }
 
@@ -45,9 +45,9 @@ public class ComentarioController {
     }
 
     @GetMapping("/{id}")
-    public ComentarioDTO listarId(@PathVariable("id") int id) {
+    public ComentaryDTO listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
-        ComentarioDTO dto = m.map(cS.searchById(id), ComentarioDTO.class);
+        ComentaryDTO dto = m.map(cS.searchById(id), ComentaryDTO.class);
         return dto;
     }
 }

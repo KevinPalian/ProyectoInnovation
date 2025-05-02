@@ -3,8 +3,8 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "ImagenesFlashcard")
-public class ImagenesFlashcard {
+@Table(name = "FlashcardImg")
+public class FlashcardImg {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFlashcardImg;
@@ -15,11 +15,11 @@ public class ImagenesFlashcard {
     @Column(name = "descFlashcardImg",length = 200,nullable = false)
     private String descFlashcardImg;
 
-    public ImagenesFlashcard() {
+    public FlashcardImg() {
 
     }
 
-    public ImagenesFlashcard(int idFlashcardImg, String urlFlashcardImg, String descFlashcardImg) {
+    public FlashcardImg(int idFlashcardImg, String urlFlashcardImg, String descFlashcardImg) {
         this.idFlashcardImg = idFlashcardImg;
         this.urlFlashcardImg = urlFlashcardImg;
         this.descFlashcardImg = descFlashcardImg;

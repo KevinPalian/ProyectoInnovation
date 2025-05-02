@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.FlashcardImgDTO;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.ImagenesFlashcard;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.FlashcardImg;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IFlashcardImgService;
 
 import java.util.List;
@@ -27,14 +27,14 @@ public class FlashcardImgController {
     @PostMapping("/prueba")
     public void Insertar(@RequestBody FlashcardImgDTO dto) {
         ModelMapper m = new ModelMapper();
-        ImagenesFlashcard i = m.map(dto, ImagenesFlashcard.class);
+        FlashcardImg i = m.map(dto, FlashcardImg.class);
         iS.insert(i);
     }
 
     @PutMapping
     public void modificar(@RequestBody FlashcardImgDTO dto) {
         ModelMapper m = new ModelMapper();
-        ImagenesFlashcard i = m.map(dto, ImagenesFlashcard.class);
+        FlashcardImg i = m.map(dto, FlashcardImg.class);
         iS.update(i);
     }
 
