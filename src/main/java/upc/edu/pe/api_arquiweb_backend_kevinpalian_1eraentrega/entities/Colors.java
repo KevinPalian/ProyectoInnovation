@@ -3,7 +3,7 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Colores") //Esto es un cambio
+@Table(name = "Colores") //Esto es un cambio de Gitbash
 public class Colors {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
