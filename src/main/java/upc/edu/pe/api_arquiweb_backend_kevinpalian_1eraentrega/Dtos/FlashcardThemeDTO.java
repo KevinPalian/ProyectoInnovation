@@ -1,11 +1,14 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcard;
+
 import java.time.LocalDate;
 
 public class FlashcardThemeDTO {
     private int idFlashcardTheme;
     private String nameFlashcardTheme;
     private LocalDate dateFlashcardTheme;
+    private Flashcard flashcard;
 
     public int getIdFlashcardTheme() {
         return idFlashcardTheme;
@@ -29,5 +32,13 @@ public class FlashcardThemeDTO {
 
     public void setDateFlashcardTheme(LocalDate dateFlashcardTheme) {
         this.dateFlashcardTheme = dateFlashcardTheme;
+    }
+
+    public Flashcard getFlashcard() {
+        return flashcard;
+    }
+
+    public void setFlashcard(Flashcard flashcard) {
+        this.flashcard = flashcard;
     }
 }
