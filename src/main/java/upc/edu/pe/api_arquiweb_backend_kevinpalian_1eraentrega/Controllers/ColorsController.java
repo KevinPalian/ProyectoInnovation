@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/colores")
 public class ColorsController {
-    @Autowired // hola probando rama
+    @Autowired
     private IColorsService cL;
 
     @GetMapping
