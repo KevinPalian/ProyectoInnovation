@@ -15,14 +15,18 @@ public class FlashcardImg {
     @Column(name = "descFlashcardImg",length = 200,nullable = false)
     private String descFlashcardImg;
 
-    public FlashcardImg() {
+    @ManyToOne
+    @JoinColumn(name = "idFlashcard")
+    private Flashcard flashcard;
 
+    public FlashcardImg() {
     }
 
-    public FlashcardImg(int idFlashcardImg, String urlFlashcardImg, String descFlashcardImg) {
+    public FlashcardImg(int idFlashcardImg, String urlFlashcardImg, String descFlashcardImg, Flashcard flashcard) {
         this.idFlashcardImg = idFlashcardImg;
         this.urlFlashcardImg = urlFlashcardImg;
         this.descFlashcardImg = descFlashcardImg;
+        this.flashcard = flashcard;
     }
 
     public int getIdFlashcardImg() {
@@ -47,5 +51,13 @@ public class FlashcardImg {
 
     public void setDescFlashcardImg(String descFlashcardImg) {
         this.descFlashcardImg = descFlashcardImg;
+    }
+
+    public Flashcard getFlashcard() {
+        return flashcard;
+    }
+
+    public void setFlashcard(Flashcard flashcard) {
+        this.flashcard = flashcard;
     }
 }

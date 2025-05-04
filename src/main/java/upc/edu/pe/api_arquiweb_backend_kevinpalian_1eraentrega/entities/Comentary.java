@@ -12,9 +12,9 @@ public class Comentary {
     @Column(name = "textComentary",length = 100,nullable = false)
     private String textComentary;
 
-    //@OneToMany <- No funciona XD
-    //@JoinColumn(name = "idUser")
-    //private User user;
+    @ManyToOne
+    @JoinColumn(name = "idUser")
+    private User user;
 
     public Comentary() {
     }
@@ -22,7 +22,7 @@ public class Comentary {
     public Comentary(int idComentary, String textComentary, User user) {
         this.idComentary = idComentary;
         this.textComentary = textComentary;
-        //this.user = new User();
+        this.user = new User();
     }
 
     public int getIdComentary() {
@@ -41,11 +41,11 @@ public class Comentary {
         this.textComentary = textComentary;
     }
 
-    //public User getUser() {
-    //    return user;
-    //}
+    public User getUser() {
+        return user;
+    }
 
-    //public void setUser(User user) {
-    //    this.user = user;
-    //}
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

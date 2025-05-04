@@ -32,7 +32,6 @@ public class Flashcard {
     @JoinColumn(name = "idUser")
     private User user;
 
-
     /*@ManyToOne
     @JoinColumn(name = "idTeacher_profile")
     private Teacher_profile teacher_profile;*/
