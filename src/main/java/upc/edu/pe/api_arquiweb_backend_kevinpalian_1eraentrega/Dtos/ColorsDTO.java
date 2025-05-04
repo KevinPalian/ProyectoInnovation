@@ -5,9 +5,9 @@ import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcar
 public class ColorsDTO {
     private int idColors;
     private String nameColors;
-    private String ColorsPrimario;
-    private String nameColorsSecundaria;
-    private String ColorsFondo;
+    private String ColorsPrimary;
+    private String nameColorsSecundary;
+    private String ColorsBackground;
     private Flashcard flashcard;
 
     public int getIdColors() {
@@ -26,28 +26,28 @@ public class ColorsDTO {
         this.nameColors = nameColors;
     }
 
-    public String getColorsPrimario() {
-        return ColorsPrimario;
+    public String getColorsPrimary() {
+        return ColorsPrimary;
     }
 
-    public void setColorsPrimario(String colorsPrimario) {
-        ColorsPrimario = colorsPrimario;
+    public void setColorsPrimary(String colorsPrimary) {
+        ColorsPrimary = colorsPrimary;
     }
 
-    public String getNameColorsSecundaria() {
-        return nameColorsSecundaria;
+    public String getNameColorsSecundary() {
+        return nameColorsSecundary;
     }
 
-    public void setNameColorsSecundaria(String nameColorsSecundaria) {
-        this.nameColorsSecundaria = nameColorsSecundaria;
+    public void setNameColorsSecundary(String nameColorsSecundary) {
+        this.nameColorsSecundary = nameColorsSecundary;
     }
 
-    public String getColorsFondo() {
-        return ColorsFondo;
+    public String getColorsBackground() {
+        return ColorsBackground;
     }
 
-    public void setColorsFondo(String colorsFondo) {
-        ColorsFondo = colorsFondo;
+    public void setColorsBackground(String colorsBackground) {
+        ColorsBackground = colorsBackground;
     }
 
     public Flashcard getFlashcard() {

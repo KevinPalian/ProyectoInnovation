@@ -3,15 +3,19 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Colores")
+@Table(name = "Colors") //Esto es un cambio de Gitbash
 public class Colors {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idColors;
+    @Column(name = "nameColors",length = 50,nullable = false)
     private String nameColors;
-    private String ColorsPrimario;
-    private String nameColorsSecundaria;
-    private String ColorsFondo;
+    @Column(name = "ColorsPrimary",length = 50,nullable = false)
+    private String ColorsPrimary;
+    @Column(name = "nameColorsSecundary",length = 50,nullable = false)
+    private String nameColorsSecundary;
+    @Column(name = "ColorsBackground",length = 50,nullable = false)
+    private String ColorsBackground;
 
     @ManyToOne
     @JoinColumn(name = "idFlashcard")
@@ -24,12 +28,12 @@ public class Colors {
     public Colors() {
     }
 
-    public Colors(int idColors, String nameColors, String colorsPrimario, String nameColorsSecundaria, String colorsFondo, Flashcard flashcard) {
+    public Colors(int idColors, String nameColors, String colorsPrimary, String nameColorsSecundary, String colorsBackground, Flashcard flashcard) {
         this.idColors = idColors;
         this.nameColors = nameColors;
-        this.ColorsPrimario = colorsPrimario;
-        this.nameColorsSecundaria = nameColorsSecundaria;
-        this.ColorsFondo = colorsFondo;
+        this.ColorsPrimary = colorsPrimary;
+        this.nameColorsSecundary = nameColorsSecundary;
+        this.ColorsBackground = colorsBackground;
         this.flashcard = flashcard;
     }
 
@@ -49,28 +53,28 @@ public class Colors {
         this.nameColors = nameColors;
     }
 
-    public String getColorsPrimario() {
-        return ColorsPrimario;
+    public String getColorsPrimary() {
+        return ColorsPrimary;
     }
 
-    public void setColorsPrimario(String colorsPrimario) {
-        ColorsPrimario = colorsPrimario;
+    public void setColorsPrimary(String colorsPrimary) {
+        ColorsPrimary = colorsPrimary;
     }
 
-    public String getNameColorsSecundaria() {
-        return nameColorsSecundaria;
+    public String getNameColorsSecundary() {
+        return nameColorsSecundary;
     }
 
-    public void setNameColorsSecundaria(String nameColorsSecundaria) {
-        this.nameColorsSecundaria = nameColorsSecundaria;
+    public void setNameColorsSecundary(String nameColorsSecundary) {
+        this.nameColorsSecundary = nameColorsSecundary;
     }
 
-    public String getColorsFondo() {
-        return ColorsFondo;
+    public String getColorsBackground() {
+        return ColorsBackground;
     }
 
-    public void setColorsFondo(String colorsFondo) {
-        ColorsFondo = colorsFondo;
+    public void setColorsBackground(String colorsBackground) {
+        ColorsBackground = colorsBackground;
     }
 
     public Flashcard getFlashcard() {

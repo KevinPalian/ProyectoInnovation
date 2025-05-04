@@ -3,6 +3,7 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
 
 public class SessionDTO {
+
     private int idSession;
     private String titlesession;
     private String descriptionsession;

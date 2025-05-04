@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="Sesion")
 public class Session {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSession;
@@ -31,6 +30,7 @@ public class Session {
     }
 
     public Session(int idSession, int durationsession, double pricesession, String descriptionsession, String titlesession, User user) {
+
         this.idSession = idSession;
         this.durationsession = durationsession;
         this.pricesession = pricesession;
@@ -38,7 +38,6 @@ public class Session {
         this.titlesession = titlesession;
         this.user = user;
     }
-
     public int getIdSession() {
         return idSession;
     }
