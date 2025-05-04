@@ -6,16 +6,12 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="Sesion")
 public class Session {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSession;
 
-
     @Column(name = "titlesession", nullable = false, length = 50)
     private String titlesession;
-
 
     @Column(name = "descriptionsession", nullable = false, length = 50)
     private String descriptionsession;
