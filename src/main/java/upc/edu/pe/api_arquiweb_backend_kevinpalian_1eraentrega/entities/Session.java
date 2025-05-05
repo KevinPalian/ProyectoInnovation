@@ -26,10 +26,14 @@ public class Session {
     @JoinColumn(name = "idUser")
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "IdTeacherProfile")
+    private Teacher_profile teacher_profile;
+
     public Session() {
     }
 
-    public Session(int idSession, int durationsession, double pricesession, String descriptionsession, String titlesession, User user) {
+    public Session(int idSession, int durationsession, double pricesession, String descriptionsession, String titlesession, User user, Teacher_profile teacher_profile) {
 
         this.idSession = idSession;
         this.durationsession = durationsession;
@@ -37,7 +41,9 @@ public class Session {
         this.descriptionsession = descriptionsession;
         this.titlesession = titlesession;
         this.user = user;
+        this.teacher_profile = teacher_profile;
     }
+
     public int getIdSession() {
         return idSession;
     }
@@ -84,6 +90,14 @@ public class Session {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Teacher_profile getTeacher_profile() {
+        return teacher_profile;
+    }
+
+    public void setTeacher_profile(Teacher_profile teacher_profile) {
+        this.teacher_profile = teacher_profile;
     }
 }
 

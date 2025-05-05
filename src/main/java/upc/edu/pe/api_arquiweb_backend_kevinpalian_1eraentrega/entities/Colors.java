@@ -21,20 +21,21 @@ public class Colors {
     @JoinColumn(name = "idFlashcard")
     private Flashcard flashcard;
 
-    /*@ManyToOne
-    @JoinColumn(name = "idTeacher_profile")
-    private Teacher_profile teacher_profile;*/
+    @ManyToOne
+    @JoinColumn(name = "IdTeacherProfile")
+    private Teacher_profile teacher_profile;
 
     public Colors() {
     }
 
-    public Colors(int idColors, String nameColors, String colorsPrimary, String nameColorsSecundary, String colorsBackground, Flashcard flashcard) {
+    public Colors(int idColors, String nameColors, String colorsPrimary, String nameColorsSecundary, String colorsBackground, Flashcard flashcard, Teacher_profile teacher_profile) {
         this.idColors = idColors;
         this.nameColors = nameColors;
         this.ColorsPrimary = colorsPrimary;
         this.nameColorsSecundary = nameColorsSecundary;
         this.ColorsBackground = colorsBackground;
         this.flashcard = flashcard;
+        this.teacher_profile = teacher_profile;
     }
 
     public int getIdColors() {
@@ -83,5 +84,13 @@ public class Colors {
 
     public void setFlashcard(Flashcard flashcard) {
         this.flashcard = flashcard;
+    }
+
+    public Teacher_profile getTeacher_profile() {
+        return teacher_profile;
+    }
+
+    public void setTeacher_profile(Teacher_profile teacher_profile) {
+        this.teacher_profile = teacher_profile;
     }
 }

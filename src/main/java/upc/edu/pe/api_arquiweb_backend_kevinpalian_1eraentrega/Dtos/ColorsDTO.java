@@ -1,6 +1,7 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcard;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Teacher_profile;
 
 public class ColorsDTO {
     private int idColors;
@@ -9,6 +10,7 @@ public class ColorsDTO {
     private String nameColorsSecundary;
     private String ColorsBackground;
     private Flashcard flashcard;
+    private Teacher_profile teacher_profile;
 
     public int getIdColors() {
         return idColors;
@@ -56,5 +58,13 @@ public class ColorsDTO {
 
     public void setFlashcard(Flashcard flashcard) {
         this.flashcard = flashcard;
+    }
+
+    public Teacher_profile getTeacher_profile() {
+        return teacher_profile;
+    }
+
+    public void setTeacher_profile(Teacher_profile teacher_profile) {
+        this.teacher_profile = teacher_profile;
     }
 }
