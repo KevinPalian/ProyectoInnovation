@@ -17,13 +17,18 @@ public class FlashcardTheme {
     @Column(name = "dateFlashcardTheme",nullable = false)
     private LocalDate dateFlashcardTheme;
 
+    @ManyToOne
+    @JoinColumn(name = "idFlashcard")
+    private Flashcard flashcard;
+
     public FlashcardTheme() {
     }
 
-    public FlashcardTheme(int idFlashcardTheme, String nameFlashcardTheme, LocalDate dateFlashcardTheme) {
+    public FlashcardTheme(int idFlashcardTheme, String nameFlashcardTheme, LocalDate dateFlashcardTheme, Flashcard flashcard) {
         this.idFlashcardTheme = idFlashcardTheme;
         this.nameFlashcardTheme = nameFlashcardTheme;
         this.dateFlashcardTheme = dateFlashcardTheme;
+        this.flashcard = flashcard;
     }
 
     public int getIdFlashcardTheme() {
@@ -48,5 +53,13 @@ public class FlashcardTheme {
 
     public void setDateFlashcardTheme(LocalDate dateFlashcardTheme) {
         this.dateFlashcardTheme = dateFlashcardTheme;
+    }
+
+    public Flashcard getFlashcard() {
+        return flashcard;
+    }
+
+    public void setFlashcard(Flashcard flashcard) {
+        this.flashcard = flashcard;
     }
 }

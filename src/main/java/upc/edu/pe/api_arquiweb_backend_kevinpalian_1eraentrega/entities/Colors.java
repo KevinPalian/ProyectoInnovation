@@ -8,20 +8,34 @@ public class Colors {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idColors;
+    @Column(name = "nameColors",length = 50,nullable = false)
     private String nameColors;
+    @Column(name = "ColorsPrimary",length = 50,nullable = false)
     private String ColorsPrimary;
+    @Column(name = "nameColorsSecundary",length = 50,nullable = false)
     private String nameColorsSecundary;
+    @Column(name = "ColorsBackground",length = 50,nullable = false)
     private String ColorsBackground;
+
+    @ManyToOne
+    @JoinColumn(name = "idFlashcard")
+    private Flashcard flashcard;
+
+    @ManyToOne
+    @JoinColumn(name = "IdTeacherProfile")
+    private Teacher_profile teacher_profile;
 
     public Colors() {
     }
 
-    public Colors(int idColors, String nameColors, String colorsPrimary, String nameColorsSecundary, String colorsBackground) {
+    public Colors(int idColors, String nameColors, String colorsPrimary, String nameColorsSecundary, String colorsBackground, Flashcard flashcard, Teacher_profile teacher_profile) {
         this.idColors = idColors;
         this.nameColors = nameColors;
         this.ColorsPrimary = colorsPrimary;
         this.nameColorsSecundary = nameColorsSecundary;
         this.ColorsBackground = colorsBackground;
+        this.flashcard = flashcard;
+        this.teacher_profile = teacher_profile;
     }
 
     public int getIdColors() {
@@ -62,5 +76,21 @@ public class Colors {
 
     public void setColorsBackground(String colorsBackground) {
         ColorsBackground = colorsBackground;
+    }
+
+    public Flashcard getFlashcard() {
+        return flashcard;
+    }
+
+    public void setFlashcard(Flashcard flashcard) {
+        this.flashcard = flashcard;
+    }
+
+    public Teacher_profile getTeacher_profile() {
+        return teacher_profile;
+    }
+
+    public void setTeacher_profile(Teacher_profile teacher_profile) {
+        this.teacher_profile = teacher_profile;
     }
 }

@@ -1,4 +1,5 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.FlashcardTheme;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
 
 public class Flashcard_SuggestionDTO {
@@ -6,6 +7,7 @@ public class Flashcard_SuggestionDTO {
     private String reason_suggestionSFlashcard;
     private String progress_basedSFlashcard;
     private User user;
+    private FlashcardTheme flashcardTheme;
 
     public int getIdFlashcard_suggestion() {
         return idFlashcard_suggestion;
@@ -37,5 +39,13 @@ public class Flashcard_SuggestionDTO {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public FlashcardTheme getFlashcardTheme() {
+        return flashcardTheme;
+    }
+
+    public void setFlashcardtheme(FlashcardTheme flashcardTheme) {
+        this.flashcardTheme = flashcardTheme;
     }
 }

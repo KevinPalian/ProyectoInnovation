@@ -1,11 +1,16 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcard;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Teacher_profile;
+
 public class ColorsDTO {
     private int idColors;
     private String nameColors;
-    private String ColorsPrimario;
-    private String nameColorsSecundaria;
-    private String ColorsFondo;
+    private String ColorsPrimary;
+    private String nameColorsSecundary;
+    private String ColorsBackground;
+    private Flashcard flashcard;
+    private Teacher_profile teacher_profile;
 
     public int getIdColors() {
         return idColors;
@@ -23,27 +28,43 @@ public class ColorsDTO {
         this.nameColors = nameColors;
     }
 
-    public String getColorsPrimario() {
-        return ColorsPrimario;
+    public String getColorsPrimary() {
+        return ColorsPrimary;
     }
 
-    public void setColorsPrimario(String colorsPrimario) {
-        ColorsPrimario = colorsPrimario;
+    public void setColorsPrimary(String colorsPrimary) {
+        ColorsPrimary = colorsPrimary;
     }
 
-    public String getNameColorsSecundaria() {
-        return nameColorsSecundaria;
+    public String getNameColorsSecundary() {
+        return nameColorsSecundary;
     }
 
-    public void setNameColorsSecundaria(String nameColorsSecundaria) {
-        this.nameColorsSecundaria = nameColorsSecundaria;
+    public void setNameColorsSecundary(String nameColorsSecundary) {
+        this.nameColorsSecundary = nameColorsSecundary;
     }
 
-    public String getColorsFondo() {
-        return ColorsFondo;
+    public String getColorsBackground() {
+        return ColorsBackground;
     }
 
-    public void setColorsFondo(String colorsFondo) {
-        ColorsFondo = colorsFondo;
+    public void setColorsBackground(String colorsBackground) {
+        ColorsBackground = colorsBackground;
+    }
+
+    public Flashcard getFlashcard() {
+        return flashcard;
+    }
+
+    public void setFlashcard(Flashcard flashcard) {
+        this.flashcard = flashcard;
+    }
+
+    public Teacher_profile getTeacher_profile() {
+        return teacher_profile;
+    }
+
+    public void setTeacher_profile(Teacher_profile teacher_profile) {
+        this.teacher_profile = teacher_profile;
     }
 }

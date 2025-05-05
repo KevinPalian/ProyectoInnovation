@@ -21,7 +21,7 @@ public class Progress_flashcard {
     @Column(name = "StateFlashcard", nullable = false, length = 50)
     private String StateFlashcard;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "IdFlashcard")
     private Flashcard flashcard;
 

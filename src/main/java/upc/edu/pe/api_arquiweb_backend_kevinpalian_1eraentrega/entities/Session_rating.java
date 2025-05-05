@@ -21,7 +21,7 @@ public class Session_rating {
     @Column(name = "DateSessionrating", nullable = false)
     private LocalDate DateSessionrating;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "Idsession")
     private Session session;
 
