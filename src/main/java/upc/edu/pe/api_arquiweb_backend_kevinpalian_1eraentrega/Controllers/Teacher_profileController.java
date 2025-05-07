@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping
+@RequestMapping("/teacher-profiles")
 public class Teacher_profileController {
     @Autowired
     private ITeacher_profileService tP;

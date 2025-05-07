@@ -31,9 +31,9 @@ public class Colors {
     public Colors(int idColors, String nameColors, String colorsPrimary, String nameColorsSecundary, String colorsBackground, Flashcard flashcard, Teacher_profile teacher_profile) {
         this.idColors = idColors;
         this.nameColors = nameColors;
-        this.ColorsPrimary = colorsPrimary;
+        ColorsPrimary = colorsPrimary;
         this.nameColorsSecundary = nameColorsSecundary;
-        this.ColorsBackground = colorsBackground;
+        ColorsBackground = colorsBackground;
         this.flashcard = flashcard;
         this.teacher_profile = teacher_profile;
     }

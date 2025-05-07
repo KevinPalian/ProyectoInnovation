@@ -12,6 +12,8 @@ import java.util.List;
 public class UserServiceImplement implements IUserService {
     @Autowired
     private IUserRepository uR;
+    @Autowired
+    private IUserRepository iUserRepository;
 
     @Override
     public List<User> list() {return uR.findAll();}
@@ -34,5 +36,11 @@ public class UserServiceImplement implements IUserService {
     @Override
     public void delete(int id) {
         uR.deleteById(id);
+    }
+
+    public Integer insertUserRol(Long user_id, Long rol_id) {
+        Integer result = 0;
+        iUserRepository.insertUserRol(user_id, rol_id);
+        return 1;
     }
 }

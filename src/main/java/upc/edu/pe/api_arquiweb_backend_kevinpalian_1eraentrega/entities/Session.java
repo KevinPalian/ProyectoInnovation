@@ -2,7 +2,13 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 
 import jakarta.persistence.*;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Getter
+@Setter
 @Entity
 @Table(name="Sesion")
 public class Session {
@@ -33,13 +39,12 @@ public class Session {
     public Session() {
     }
 
-    public Session(int idSession, int durationsession, double pricesession, String descriptionsession, String titlesession, User user, Teacher_profile teacher_profile) {
-
+    public Session(int idSession, String titlesession, String descriptionsession, double pricesession, int durationsession, User user, Teacher_profile teacher_profile) {
         this.idSession = idSession;
-        this.durationsession = durationsession;
-        this.pricesession = pricesession;
-        this.descriptionsession = descriptionsession;
         this.titlesession = titlesession;
+        this.descriptionsession = descriptionsession;
+        this.pricesession = pricesession;
+        this.durationsession = durationsession;
         this.user = user;
         this.teacher_profile = teacher_profile;
     }
@@ -50,22 +55,6 @@ public class Session {
 
     public void setIdSession(int idSession) {
         this.idSession = idSession;
-    }
-
-    public int getDurationsession() {
-        return durationsession;
-    }
-
-    public void setDurationsession(int durationsession) {
-        this.durationsession = durationsession;
-    }
-
-    public double getPricesession() {
-        return pricesession;
-    }
-
-    public void setPricesession(double pricesession) {
-        this.pricesession = pricesession;
     }
 
     public String getTitlesession() {
@@ -82,6 +71,22 @@ public class Session {
 
     public void setDescriptionsession(String descriptionsession) {
         this.descriptionsession = descriptionsession;
+    }
+
+    public double getPricesession() {
+        return pricesession;
+    }
+
+    public void setPricesession(double pricesession) {
+        this.pricesession = pricesession;
+    }
+
+    public int getDurationsession() {
+        return durationsession;
+    }
+
+    public void setDurationsession(int durationsession) {
+        this.durationsession = durationsession;
     }
 
     public User getUser() {

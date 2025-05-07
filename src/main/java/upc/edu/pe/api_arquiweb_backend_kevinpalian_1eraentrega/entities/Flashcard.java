@@ -1,6 +1,8 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -31,10 +33,6 @@ public class Flashcard {
     @ManyToOne
     @JoinColumn(name = "idUser")
     private User user;
-
-    /*@ManyToOne
-    @JoinColumn(name = "idTeacher_profile")
-    private Teacher_profile teacher_profile;*/
 
     public Flashcard() {
     }
@@ -113,12 +111,4 @@ public class Flashcard {
     public void setUser(User user) {
         this.user = user;
     }
-
-    /*public Teacher_profile getTeacher_profile() {
-        return teacher_profile;
-    }
-
-    public void setTeacher_profile(Teacher_profile teacher_profile) {
-        this.teacher_profile = teacher_profile;
-    }*/
 }

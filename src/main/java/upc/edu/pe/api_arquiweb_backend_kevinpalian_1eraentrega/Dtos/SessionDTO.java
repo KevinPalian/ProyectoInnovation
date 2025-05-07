@@ -1,5 +1,6 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import lombok.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Teacher_profile;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
 
@@ -21,20 +22,12 @@ public class SessionDTO {
         this.idSession = idSession;
     }
 
-    public int getDurationsession() {
-        return durationsession;
+    public String getTitlesession() {
+        return titlesession;
     }
 
-    public void setDurationsession(int durationsession) {
-        this.durationsession = durationsession;
-    }
-
-    public double getPricesession() {
-        return pricesession;
-    }
-
-    public void setPricesession(double pricesession) {
-        this.pricesession = pricesession;
+    public void setTitlesession(String titlesession) {
+        this.titlesession = titlesession;
     }
 
     public String getDescriptionsession() {
@@ -45,12 +38,20 @@ public class SessionDTO {
         this.descriptionsession = descriptionsession;
     }
 
-    public String getTitlesession() {
-        return titlesession;
+    public double getPricesession() {
+        return pricesession;
     }
 
-    public void setTitlesession(String titlesession) {
-        this.titlesession = titlesession;
+    public void setPricesession(double pricesession) {
+        this.pricesession = pricesession;
+    }
+
+    public int getDurationsession() {
+        return durationsession;
+    }
+
+    public void setDurationsession(int durationsession) {
+        this.durationsession = durationsession;
     }
 
     public User getUser() {
