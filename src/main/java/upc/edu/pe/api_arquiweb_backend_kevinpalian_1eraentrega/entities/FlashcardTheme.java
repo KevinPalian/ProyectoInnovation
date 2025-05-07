@@ -1,9 +1,15 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "FlashcardTheme")
 public class FlashcardTheme {
@@ -20,46 +26,4 @@ public class FlashcardTheme {
     @ManyToOne
     @JoinColumn(name = "idFlashcard")
     private Flashcard flashcard;
-
-    public FlashcardTheme() {
-    }
-
-    public FlashcardTheme(int idFlashcardTheme, String nameFlashcardTheme, LocalDate dateFlashcardTheme, Flashcard flashcard) {
-        this.idFlashcardTheme = idFlashcardTheme;
-        this.nameFlashcardTheme = nameFlashcardTheme;
-        this.dateFlashcardTheme = dateFlashcardTheme;
-        this.flashcard = flashcard;
-    }
-
-    public int getIdFlashcardTheme() {
-        return idFlashcardTheme;
-    }
-
-    public void setIdFlashcardTheme(int idFlashcardTheme) {
-        this.idFlashcardTheme = idFlashcardTheme;
-    }
-
-    public String getNameFlashcardTheme() {
-        return nameFlashcardTheme;
-    }
-
-    public void setNameFlashcardTheme(String nameFlashcardTheme) {
-        this.nameFlashcardTheme = nameFlashcardTheme;
-    }
-
-    public LocalDate getDateFlashcardTheme() {
-        return dateFlashcardTheme;
-    }
-
-    public void setDateFlashcardTheme(LocalDate dateFlashcardTheme) {
-        this.dateFlashcardTheme = dateFlashcardTheme;
-    }
-
-    public Flashcard getFlashcard() {
-        return flashcard;
-    }
-
-    public void setFlashcard(Flashcard flashcard) {
-        this.flashcard = flashcard;
-    }
 }

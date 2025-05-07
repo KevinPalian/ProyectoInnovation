@@ -1,7 +1,13 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "FlashcardImg")
 public class FlashcardImg {
@@ -18,46 +24,4 @@ public class FlashcardImg {
     @ManyToOne
     @JoinColumn(name = "idFlashcard")
     private Flashcard flashcard;
-
-    public FlashcardImg() {
-    }
-
-    public FlashcardImg(int idFlashcardImg, String urlFlashcardImg, String descFlashcardImg, Flashcard flashcard) {
-        this.idFlashcardImg = idFlashcardImg;
-        this.urlFlashcardImg = urlFlashcardImg;
-        this.descFlashcardImg = descFlashcardImg;
-        this.flashcard = flashcard;
-    }
-
-    public int getIdFlashcardImg() {
-        return idFlashcardImg;
-    }
-
-    public void setIdFlashcardImg(int idFlashcardImg) {
-        this.idFlashcardImg = idFlashcardImg;
-    }
-
-    public String getUrlFlashcardImg() {
-        return urlFlashcardImg;
-    }
-
-    public void setUrlFlashcardImg(String urlFlashcardImg) {
-        this.urlFlashcardImg = urlFlashcardImg;
-    }
-
-    public String getDescFlashcardImg() {
-        return descFlashcardImg;
-    }
-
-    public void setDescFlashcardImg(String descFlashcardImg) {
-        this.descFlashcardImg = descFlashcardImg;
-    }
-
-    public Flashcard getFlashcard() {
-        return flashcard;
-    }
-
-    public void setFlashcard(Flashcard flashcard) {
-        this.flashcard = flashcard;
-    }
 }
