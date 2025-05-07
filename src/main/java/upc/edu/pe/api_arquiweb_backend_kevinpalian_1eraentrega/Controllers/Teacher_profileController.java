@@ -1,25 +1,22 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Controllers;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.InstitutionDTO;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.Experence_teacherDTO;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.Teacher_profileDTO;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IInstitutionService;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.ITeacher_profileService;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Institution;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Teacher_profile;
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping
+@RequestMapping("/TeacherProfile")
 public class Teacher_profileController {
     @Autowired
     private ITeacher_profileService tP;
 
-    @GetMapping
+    @GetMapping("/Lista")
     public List<Teacher_profileDTO> listar() {
         return tP.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
@@ -49,4 +46,19 @@ public class Teacher_profileController {
     }
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) { tP.delete(id); }
+
+    public List<Experence_teacherDTO> perfildocente(){
+
+        List<Experence_teacherDTO> dtoLista=new ArrayList<>();
+        List<String[]> fila=tP.obtenerPerfilesDocentes();
+        for (String[] columna:fila) {
+            Experence_teacherDTO dto = new Experence_teacherDTO();
+            dto.setNameUser(columna[0]);
+            dto.setLastnameUser(columna[1]);
+            dto.setSpecialistTeacherProfile(columna[2]);
+            dto.setExperienceTeacherProfile(columna[3]);
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+        }
 }

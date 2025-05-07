@@ -39,4 +39,10 @@ public class Teacher_profileImplement implements ITeacher_profileService {
     public void delete(int id) {
         iR.deleteById(id);
     }
+
+    @Override
+    public List<String[]> obtenerPerfilesDocentes() {
+        return iR.getAllTeacherProfiles();
+    }
+
 }

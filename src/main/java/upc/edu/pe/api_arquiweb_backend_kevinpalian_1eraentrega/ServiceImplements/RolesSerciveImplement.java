@@ -41,4 +41,14 @@ rR.save(r);
     public void delete(int id) {
 
     }
-}
+
+    @Override
+    public List<String[]> findbyUsersandRoles() {
+        return rR.findbyUsersandRoles();
+    }
+
+    //@Override
+    //ublic Integer ingresoidADMIN() {
+      //  return rR.ingresoidADMIN();
+    }
+
