@@ -1,8 +1,10 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import lombok.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcard;
 
 import java.time.LocalDate;
+
 
 public class FlashcardThemeDTO {
     private int idFlashcardTheme;

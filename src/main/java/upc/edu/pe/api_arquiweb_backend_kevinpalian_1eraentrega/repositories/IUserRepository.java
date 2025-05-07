@@ -8,11 +8,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
 
-import java.util.Optional;
-
 @Repository
 public interface IUserRepository extends JpaRepository<User, Integer> {
-    Optional<User> findByUsername(String username);
+    public User findOneByNameUser(String nameUser);
+
+    @Query("select count(u.nameUser) from User u where u.nameUser =:username")
+    public int buscarUsername(@Param("nameUser") String nombre);
 
     @Transactional
     @Modifying

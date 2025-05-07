@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ApiArquiWebBackendKevinPalian1eraEntregaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.968 s -- in upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ApiArquiWebBackendKevinPalian1eraEntregaApplicationTests

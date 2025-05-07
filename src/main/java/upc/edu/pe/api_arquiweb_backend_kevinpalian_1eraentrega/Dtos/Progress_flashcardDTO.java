@@ -1,6 +1,8 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import lombok.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Flashcard;
+
 
 public class Progress_flashcardDTO {
     private int idProgress;
