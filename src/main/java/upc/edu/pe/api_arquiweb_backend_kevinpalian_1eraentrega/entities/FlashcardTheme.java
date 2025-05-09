@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+
 @Entity
 @Table(name = "FlashcardTheme")
 public class FlashcardTheme {

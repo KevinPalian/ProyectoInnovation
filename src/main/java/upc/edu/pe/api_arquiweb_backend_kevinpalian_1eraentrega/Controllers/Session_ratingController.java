@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/sesion-rating")
+@RequestMapping("/session-ratings")
 public class Session_ratingController {
     @Autowired
     private ISession_ratingService sR;

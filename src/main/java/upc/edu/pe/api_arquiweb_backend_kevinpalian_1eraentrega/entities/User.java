@@ -4,6 +4,8 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="Users")
@@ -15,14 +17,14 @@ public class User {
     @Column(name = "nameUser", length = 100, nullable = false)
     private String nameUser;
 
-    @Column(name = "lastnameUser", length = 100, nullable = false)
-    private String lastnameUser;
-
     @Column(name = "emailUser", length = 250, nullable = false)
     private String emailUser;
 
     @Column(name = "passwordUser", length = 15, nullable = false)
     private String passwordUser;
+
+    @Column(name = "enabled", nullable = false)
+    private Boolean enabled;
 
     @Column(name = "belong_institutionUser", nullable = false)
     private Boolean belong_institutionUser;
@@ -39,27 +41,29 @@ public class User {
     @Column(name = "phoneUser", length = 20, nullable = false)
     private String phoneUser;
 
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Roles> roles = new HashSet<>();
+
     public User() {
     }
 
-    public User(int idUser, String nameUser, String lastnameUser, String emailUser, String passwordUser, Boolean belong_institutionUser, int institution_codeUser, String genderUser, int ageUser) {
+    public User(int idUser, String nameUser, String emailUser, String passwordUser, Boolean enabled, Boolean belong_institutionUser, int institution_codeUser, String genderUser, int ageUser, String phoneUser, Set<Roles> roles) {
         this.idUser = idUser;
         this.nameUser = nameUser;
-        this.lastnameUser = lastnameUser;
         this.emailUser = emailUser;
         this.passwordUser = passwordUser;
+        this.enabled = enabled;
         this.belong_institutionUser = belong_institutionUser;
         this.institution_codeUser = institution_codeUser;
         this.genderUser = genderUser;
         this.ageUser = ageUser;
-    }
-
-    public String getPhoneUser() {
-        return phoneUser;
-    }
-
-    public void setPhoneUser(String phoneUser) {
         this.phoneUser = phoneUser;
+        this.roles = roles;
     }
 
     public int getIdUser() {
@@ -78,14 +82,6 @@ public class User {
         this.nameUser = nameUser;
     }
 
-    public String getLastnameUser() {
-        return lastnameUser;
-    }
-
-    public void setLastnameUser(String lastnameUser) {
-        this.lastnameUser = lastnameUser;
-    }
-
     public String getEmailUser() {
         return emailUser;
     }
@@ -100,6 +96,14 @@ public class User {
 
     public void setPasswordUser(String passwordUser) {
         this.passwordUser = passwordUser;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     public Boolean getBelong_institutionUser() {
@@ -132,5 +136,21 @@ public class User {
 
     public void setAgeUser(int ageUser) {
         this.ageUser = ageUser;
+    }
+
+    public String getPhoneUser() {
+        return phoneUser;
+    }
+
+    public void setPhoneUser(String phoneUser) {
+        this.phoneUser = phoneUser;
+    }
+
+    public Set<Roles> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Roles> roles) {
+        this.roles = roles;
     }
 }

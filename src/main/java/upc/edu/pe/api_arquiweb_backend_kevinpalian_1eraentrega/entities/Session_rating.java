@@ -1,6 +1,7 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -29,10 +30,10 @@ public class Session_rating {
     }
 
     public Session_rating(int idSessionRating, int scoreSessionRating, String comentSessionRating, LocalDate dateSessionrating, Session session) {
-        this.IdSessionRating = idSessionRating;
-        this.ScoreSessionRating = scoreSessionRating;
+        IdSessionRating = idSessionRating;
+        ScoreSessionRating = scoreSessionRating;
         this.comentSessionRating = comentSessionRating;
-        this.DateSessionrating = dateSessionrating;
+        DateSessionrating = dateSessionrating;
         this.session = session;
     }
 
@@ -41,7 +42,7 @@ public class Session_rating {
     }
 
     public void setIdSessionRating(int idSessionRating) {
-        this.IdSessionRating = idSessionRating;
+        IdSessionRating = idSessionRating;
     }
 
     public int getScoreSessionRating() {
@@ -49,7 +50,7 @@ public class Session_rating {
     }
 
     public void setScoreSessionRating(int scoreSessionRating) {
-        this.ScoreSessionRating = scoreSessionRating;
+        ScoreSessionRating = scoreSessionRating;
     }
 
     public String getComentSessionRating() {
@@ -65,7 +66,7 @@ public class Session_rating {
     }
 
     public void setDateSessionrating(LocalDate dateSessionrating) {
-        this.DateSessionrating = dateSessionrating;
+        DateSessionrating = dateSessionrating;
     }
 
     public Session getSession() {

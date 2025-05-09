@@ -2,6 +2,7 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "Progress_flashcard")
 public class Progress_flashcard {
@@ -30,10 +31,10 @@ public class Progress_flashcard {
 
     public Progress_flashcard(int idProgress, int correctFlashcard, int incorrectFlashcard, int timeSpentFlashcard, String stateFlashcard, Flashcard flashcard) {
         this.idProgress = idProgress;
-        this.CorrectFlashcard = correctFlashcard;
-        this.IncorrectFlashcard = incorrectFlashcard;
-        this.TimeSpentFlashcard = timeSpentFlashcard;
-        this.StateFlashcard = stateFlashcard;
+        CorrectFlashcard = correctFlashcard;
+        IncorrectFlashcard = incorrectFlashcard;
+        TimeSpentFlashcard = timeSpentFlashcard;
+        StateFlashcard = stateFlashcard;
         this.flashcard = flashcard;
     }
 
@@ -50,7 +51,7 @@ public class Progress_flashcard {
     }
 
     public void setCorrectFlashcard(int correctFlashcard) {
-        this.CorrectFlashcard = correctFlashcard;
+        CorrectFlashcard = correctFlashcard;
     }
 
     public int getIncorrectFlashcard() {
@@ -58,7 +59,7 @@ public class Progress_flashcard {
     }
 
     public void setIncorrectFlashcard(int incorrectFlashcard) {
-        this.IncorrectFlashcard = incorrectFlashcard;
+        IncorrectFlashcard = incorrectFlashcard;
     }
 
     public int getTimeSpentFlashcard() {
@@ -66,7 +67,7 @@ public class Progress_flashcard {
     }
 
     public void setTimeSpentFlashcard(int timeSpentFlashcard) {
-        this.TimeSpentFlashcard = timeSpentFlashcard;
+        TimeSpentFlashcard = timeSpentFlashcard;
     }
 
     public String getStateFlashcard() {
@@ -74,7 +75,7 @@ public class Progress_flashcard {
     }
 
     public void setStateFlashcard(String stateFlashcard) {
-        this.StateFlashcard = stateFlashcard;
+        StateFlashcard = stateFlashcard;
     }
 
     public Flashcard getFlashcard() {

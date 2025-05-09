@@ -1,6 +1,7 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+
 @Entity
 @Table(name="flashcard_suggestion")
 public class flashcard_suggestion {

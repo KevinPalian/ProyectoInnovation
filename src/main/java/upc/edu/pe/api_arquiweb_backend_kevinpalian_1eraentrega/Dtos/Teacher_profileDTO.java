@@ -1,8 +1,8 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import lombok.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Institution;
-import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Session;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
 
 public class Teacher_profileDTO {
@@ -55,27 +55,27 @@ public class Teacher_profileDTO {
         AverageGradeTeacherProfile = averageGradeTeacherProfile;
     }
 
-    public Institution getInstitution() {
+    public upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Institution getInstitution() {
         return Institution;
     }
 
-    public void setInstitution(Institution institution) {
+    public void setInstitution(upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Institution institution) {
         Institution = institution;
     }
 
-    public Comentary getComentary() {
+    public upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary getComentary() {
         return Comentary;
     }
 
-    public void setComentary(Comentary comentary) {
+    public void setComentary(upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary comentary) {
         Comentary = comentary;
     }
 
-    public User getUser() {
+    public upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User getUser() {
         return User;
     }
 
-    public void setUser(User user) {
+    public void setUser(upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User user) {
         User = user;
     }
 }

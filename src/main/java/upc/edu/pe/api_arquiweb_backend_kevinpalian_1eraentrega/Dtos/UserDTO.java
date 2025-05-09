@@ -1,5 +1,7 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import lombok.*;
+
 public class UserDTO {
     private int idUser;
     private String nameUser;
@@ -11,14 +13,6 @@ public class UserDTO {
     private String genderUser;
     private int ageUser;
     private String phoneUser;
-
-    public String getPhoneUser() {
-        return phoneUser;
-    }
-
-    public void setPhoneUser(String phoneUser) {
-        this.phoneUser = phoneUser;
-    }
 
     public int getIdUser() {
         return idUser;
@@ -90,5 +84,13 @@ public class UserDTO {
 
     public void setAgeUser(int ageUser) {
         this.ageUser = ageUser;
+    }
+
+    public String getPhoneUser() {
+        return phoneUser;
+    }
+
+    public void setPhoneUser(String phoneUser) {
+        this.phoneUser = phoneUser;
     }
 }

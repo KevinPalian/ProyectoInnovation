@@ -1,4 +1,5 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
+import lombok.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.FlashcardTheme;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
 
@@ -45,7 +46,7 @@ public class Flashcard_SuggestionDTO {
         return flashcardTheme;
     }
 
-    public void setFlashcardtheme(FlashcardTheme flashcardTheme) {
+    public void setFlashcardTheme(FlashcardTheme flashcardTheme) {
         this.flashcardTheme = flashcardTheme;
     }
 }

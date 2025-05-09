@@ -1,6 +1,7 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "Comentary")
@@ -17,12 +18,6 @@ public class Comentary {
     private User user;
 
     public Comentary() {
-    }
-
-    public Comentary(int idComentary, String textComentary, User user) {
-        this.idComentary = idComentary;
-        this.textComentary = textComentary;
-        this.user = new User();
     }
 
     public int getIdComentary() {
