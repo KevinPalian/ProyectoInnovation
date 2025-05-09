@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class RolesController {
 @Autowired
     private IRolesService rR;
-
+// testeando
 @GetMapping
 private List<RolesDTO> Listar(){
     return rR.List().stream().map(x->{
