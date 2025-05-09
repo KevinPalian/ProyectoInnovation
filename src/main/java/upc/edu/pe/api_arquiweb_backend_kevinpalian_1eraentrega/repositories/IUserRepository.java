@@ -5,8 +5,11 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Roles;
 import org.springframework.transaction.annotation.Transactional;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.User;
+
+import java.util.List;
 
 @Repository
 public interface IUserRepository extends JpaRepository<User, Integer> {

@@ -11,4 +11,5 @@ public interface ITeacher_profileService {
     public Teacher_profile searchById(int id);
     public void update(Teacher_profile i);
     public void delete(int id);
+    List<String[]> obtenerPerfilesDocentes();
 }

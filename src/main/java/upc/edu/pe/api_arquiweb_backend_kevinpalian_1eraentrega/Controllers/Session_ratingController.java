@@ -19,7 +19,7 @@ public class Session_ratingController {
     @Autowired
     private ISession_ratingService sR;
 
-    @GetMapping
+    @GetMapping("/listar")
     public List<Session_ratingDTO> listar() {
         return sR.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
@@ -34,7 +34,7 @@ public class Session_ratingController {
         sR.insert(i);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/dad/{id}")
     public Session_ratingDTO listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         Session_ratingDTO dto = m.map(sR.searchById(id), Session_ratingDTO.class);

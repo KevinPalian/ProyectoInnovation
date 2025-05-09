@@ -13,6 +13,9 @@ public interface IRolesService {
         public void update(Roles r);
         public void delete(int id);
 
+
+        List<String[]> findbyUsersandRoles();
+        //public Integer ingresoidADMIN();
 }
 
 //public List<Institution> list();----------
