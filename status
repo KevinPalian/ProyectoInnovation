@@ -1,0 +1,252 @@
+[33mcommit 6849bd9b0b30d938824f37e51762f62ba1d316d8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/kevin_palian[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 90ba196 2c0a23b
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Thu May 8 23:51:30 2025 -0500
+
+    Merge pull request #13 from KevinPalian/areadaniel
+    
+    subo mi avanze con 2 queries
+
+[33mcommit 2c0a23bf59c3971a4fc21a1e947476b87855096c[m[33m ([m[1;31morigin/areadaniel[m[33m)[m
+Merge: 983f0b2 90ba196
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Thu May 8 23:51:22 2025 -0500
+
+    Merge branch 'main' into areadaniel
+
+[33mcommit 983f0b2848835c484f90669d0a9ce115292d0544[m
+Author: daniherrera <u20201e786@upc.edu.pe>
+Date:   Wed May 7 16:46:56 2025 -0500
+
+    subo mi avanze con 2 queries. posiblente se tenga que colocar mas queries pero ya sera con seguridad ya que actualizare mi area de trabajo
+
+[33mcommit 90ba196a791d58ae00ddfa5e9981eeafd2873924[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Wed May 7 15:00:44 2025 -0500
+
+    intento de modificacion de database para despliegue
+
+[33mcommit 6eee2dbf218b055c019443c427791eb1ea633a8e[m
+Merge: 125a643 bfca7c9
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 14:47:55 2025 -0500
+
+    Merge pull request #12 from KevinPalian/kevin_palian
+    
+    actualizacion de database
+
+[33mcommit bfca7c9d0622779294acefe4d66f25673a10dbc9[m
+Merge: 600dfa5 125a643
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 14:47:47 2025 -0500
+
+    Merge branch 'main' into kevin_palian
+
+[33mcommit 600dfa5f797ca98ed4002bb898f570b91b4f6e33[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Wed May 7 14:45:44 2025 -0500
+
+    actualizacion de database
+
+[33mcommit 125a643174377f4bc3e57f5c80619ffc8cac89d6[m
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 04:07:43 2025 -0500
+
+    Update application.properties
+
+[33mcommit 46c766b2617154a8df3a92a35fd8fef9603157af[m
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 03:43:25 2025 -0500
+
+    Update application.properties
+
+[33mcommit 813b31f5fec0e73bac8eebeeffcba3b9946579fa[m
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 03:33:27 2025 -0500
+
+    Update application.properties
+
+[33mcommit 2b13add7aca292aadd7e25b8698716ee4dd34a94[m
+Merge: 358d75d 65bf2b1
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 03:25:35 2025 -0500
+
+    Merge pull request #11 from KevinPalian/kevin_palian
+    
+    cambio de puerto en properties
+
+[33mcommit 65bf2b1e4b605390edb202b464bea992bc410777[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Wed May 7 03:24:49 2025 -0500
+
+    cambio de puerto en properties
+
+[33mcommit 358d75d0b78b144f84f32460d044167c2de8f94e[m
+Merge: d5e0ffb f752f16
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed May 7 03:13:03 2025 -0500
+
+    Merge pull request #10 from KevinPalian/kevin_palian
+    
+    Kevin palian - Modificación de Security y Deploy Render
+
+[33mcommit f752f161f29e425b3e6e42e8fab18b1a2d77068c[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Wed May 7 03:11:04 2025 -0500
+
+    Serealizo el security y Deploy en render
+
+[33mcommit dabe6fe66219c86b0edc2613c478adab082e24f3[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Tue May 6 19:39:56 2025 -0500
+
+    Se actualizo de una manera mas limpias las tablas entities y en proceso de agregar seguridad, se modifico algunas conexiones del user y role
+
+[33mcommit d5e0ffb64feb5f263e01a83439d3a7aef14b7eed[m
+Merge: 13d0bfb 4644a12
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Mon May 5 00:49:34 2025 -0500
+
+    Merge pull request #9 from KevinPalian/areaArturo
+    
+    Area arturo - Conexiones de Tablas
+
+[33mcommit 4644a125905fe293e5aba1a1a0e7ce28959bd741[m[33m ([m[1;31morigin/areaArturo[m[33m)[m
+Author: Arturo <u202211388@upc.edu.pe>
+Date:   Sun May 4 19:54:46 2025 -0500
+
+    conexiones con tablas completadas
+
+[33mcommit 9ac02da918cebabe6a7c8f3ea7bcba53b5016930[m
+Merge: ac176d9 13d0bfb
+Author: Arturo <u202211388@upc.edu.pe>
+Date:   Sun May 4 12:33:25 2025 -0500
+
+    Merge con main resuelto en IntelliJ
+
+[33mcommit 13d0bfb7ed2d1224acee05aa1d072a0bc652bd5e[m
+Merge: 828af0a 9356fbf
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Sun May 4 02:31:35 2025 -0500
+
+    Merge pull request #8 from KevinPalian/kevin_palian
+    
+    Kevin palian
+
+[33mcommit 9356fbf0c672323daea1bb7291e8131f33636b98[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Sun May 4 02:29:29 2025 -0500
+
+    Se cambio el nombre Colores a ingles con los parametros
+
+[33mcommit dc2f216bd12659948610efc5cfc09ccbf281c5f9[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Sun May 4 02:14:41 2025 -0500
+
+    se elimino comentario
+
+[33mcommit 828af0ab41f357f788c1a59965890278d696c27f[m
+Merge: 7dfa4d4 59adfd4
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Sun May 4 02:05:23 2025 -0500
+
+    Merge pull request #7 from KevinPalian/areadaniel
+    
+    3 tablas que faltaron
+
+[33mcommit 7dfa4d4db309d06e296ff7f030ca709cc14edc3e[m
+Merge: 8cfe152 2d3e92f
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Sun May 4 01:32:07 2025 -0500
+
+    Merge pull request #6 from KevinPalian/kevin_palian
+    
+    Kevin palian agrego un comentario de ejemplo
+
+[33mcommit 2d3e92f9ab94f5aebc285bcaf6413c45c81e7474[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Sun May 4 01:06:50 2025 -0500
+
+    modificado
+
+[33mcommit be90915af93f9d50ba2afe418a49143900d4707f[m
+Author: KevinPalian <u20211c594@upc.edu.pe>
+Date:   Sun May 4 01:04:09 2025 -0500
+
+    Agregue un comentario
+
+[33mcommit 59adfd4aac7af39656e5a5255c0a61806ba05591[m
+Author: daniherrera <u20201e786@upc.edu.pe>
+Date:   Sun May 4 01:03:50 2025 -0500
+
+    se subio las ultimas 3 tablas que faltaron
+
+[33mcommit ac176d9d06ec9c1839f1b2ce338696a657a319d4[m
+Author: Arturo-Jesus7 <u202211388@upc.edu.pe>
+Date:   Sat May 3 22:12:48 2025 -0500
+
+    Agregadas conexiones entre tablas existentes
+    
+    Agregar las tablas que faltan
+
+[33mcommit ee4714647e1e6d3367da8b6bb75a2d161618cdfa[m
+Author: Arturo-Jesus7 <u202211388@upc.edu.pe>
+Date:   Sat May 3 22:11:42 2025 -0500
+
+    Conexiones hechas entre las tablas existentes
+    
+    Agregar tablas que faltan
+
+[33mcommit 8cfe152904b56c693b219e13def06d5b681617ea[m
+Merge: a9e41d9 4d97eed
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Fri May 2 02:59:09 2025 -0500
+
+    Merge pull request #5 from KevinPalian/AreaGero
+    
+    Area Gero - Ingreso de Datos
+
+[33mcommit a9e41d95f45bb3af673024c420bccfa513cb632c[m[33m ([m[1;31morigin/JorgeRama[m[33m)[m
+Merge: 63e2530 0fa2044
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Fri May 2 02:36:26 2025 -0500
+
+    Merge pull request #4 from KevinPalian/JorgeRama
+    
+    Jorge Creo su Rama
+
+[33mcommit 0fa20449ca8663337e86e5c6e7ca363ca110ba76[m
+Author: JorgeGalindoYallico <u202118175@upc.edu.pe>
+Date:   Fri May 2 02:27:39 2025 -0500
+
+    agregando un comentario en controller de prueba
+
+[33mcommit 4d97eedefd6b71d9ca8a52f528fa53762f86daf2[m[33m ([m[1;31morigin/AreaGero[m[33m)[m
+Author: GerardTempladera <u20221440@upc.edu.pe>
+Date:   Fri May 2 00:42:37 2025 -0500
+
+    Actualice mi tabla
+
+[33mcommit 60cd26f6631923568bc7d83d93eb970893d5523e[m
+Merge: 62867be 63e2530
+Author: GerardTempladera <u20221440@upc.edu.pe>
+Date:   Thu May 1 21:20:11 2025 -0500
+
+    Merge remote-tracking branch 'origin/main' into AreaGero
+
+[33mcommit 62867be2a7286e9b8b693e29b03560d9077b44b5[m
+Author: GerardTempladera <u20221440@upc.edu.pe>
+Date:   Thu May 1 21:11:29 2025 -0500
+
+    Actualice mi tabla
+
+[33mcommit 63e253044db4ce37706bcd9fb18b86a1733f8dae[m
+Merge: 086fc85 5feeb8c
+Author: Kevin Samir Palian Samaniego <u20211c594@upc.edu.pe>
+Date:   Wed Apr 30 04:17:38 2025 -0500
+
+    Merge pull request #3 from KevinPalian/kevin_palian
+    
+    Correción de errores y tablas no eliminadas
+
+[33mcommit 5feeb8cb8bf728be4833bc32e65e
