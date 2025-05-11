@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.UserDTO;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServiceImplements.UserServiceImplement;
@@ -21,12 +22,15 @@ public class UserController {
     private IUserService uS;
     @Autowired
     private UserServiceImplement userServiceImplement;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @PostMapping("/save/{user_id}/{rol_id}")
     public ResponseEntity<Integer> saveUseRol(@PathVariable("user_id") Long user_id,
                                               @PathVariable("rol_id") Long rol_id){
         return new ResponseEntity<Integer>(userServiceImplement.insertUserRol(user_id, rol_id), HttpStatus.OK);
-        //return new ResponseEntity<Integer>(uService.insertUserRol2(user_id, rol_id),HttpStatus.OK);
+        //return new ResponseEntity<Integer>(uService.insertUserRol2(user_id, rol_id),HttpStatus.OK)
+
     }
 
     @GetMapping
@@ -41,6 +45,8 @@ public class UserController {
     public void insertar(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         User u = m.map(dto, User.class);
+        String encryptedPassword = passwordEncoder.encode(u.getPasswordUser());
+        u.setPasswordUser(encryptedPassword);
         uS.insert(u);
     }
 
