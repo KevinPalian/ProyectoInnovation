@@ -4,12 +4,14 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.io.Serializable;
+//import java.util.HashSet;
+import java.util.List;
+//import java.util.Set;
 
 @Entity
 @Table(name="Users")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUser;
@@ -20,7 +22,7 @@ public class User {
     @Column(name = "emailUser", length = 250, nullable = false)
     private String emailUser;
 
-    @Column(name = "passwordUser", length = 50, nullable = false)
+    @Column(name = "passwordUser", length = 200, nullable = false)
     private String passwordUser;
 
     @Column(name = "enabled", nullable = false)
@@ -41,18 +43,21 @@ public class User {
     @Column(name = "phoneUser", length = 20, nullable = false)
     private String phoneUser;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-    private Set<Roles> roles = new HashSet<>();
+    //@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    //@JoinTable(
+      //      name = "user_roles",
+       //     joinColumns = @JoinColumn(name = "user_id"),
+         //   inverseJoinColumns = @JoinColumn(name = "role_id")
+    //)
+
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "idUser")
+    private List<Roles> roles;
 
     public User() {
     }
 
-    public User(int idUser, String nameUser, String emailUser, String passwordUser, Boolean enabled, Boolean belong_institutionUser, int institution_codeUser, String genderUser, int ageUser, String phoneUser, Set<Roles> roles) {
+    public User(int idUser, String nameUser, String emailUser, String passwordUser, Boolean enabled, Boolean belong_institutionUser, int institution_codeUser, String genderUser, int ageUser, String phoneUser, List<Roles> roles) {
         this.idUser = idUser;
         this.nameUser = nameUser;
         this.emailUser = emailUser;
@@ -146,11 +151,11 @@ public class User {
         this.phoneUser = phoneUser;
     }
 
-    public Set<Roles> getRoles() {
+    public List<Roles> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Roles> roles) {
+    public void setRoles(List<Roles> roles) {
         this.roles = roles;
     }
 }

@@ -1,5 +1,6 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 public class UserDTO {
@@ -7,6 +8,7 @@ public class UserDTO {
     private String nameUser;
     private String lastnameUser;
     private String emailUser;
+    @JsonIgnore
     private String passwordUser;
     private Boolean belong_institutionUser;
     private int institution_codeUser;

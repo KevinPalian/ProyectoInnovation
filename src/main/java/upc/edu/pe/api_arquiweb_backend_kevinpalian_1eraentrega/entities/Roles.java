@@ -3,7 +3,7 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Roles")
+@Table(name = "Roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "roles"})})
 public class Roles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +13,7 @@ public class Roles {
     private String nameRole;
 
     @ManyToOne
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "idUser", nullable = false)
     private User user;
 
     public Roles() {
