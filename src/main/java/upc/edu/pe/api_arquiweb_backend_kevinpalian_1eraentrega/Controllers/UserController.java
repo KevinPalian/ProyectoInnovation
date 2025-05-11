@@ -46,6 +46,7 @@ public class UserController {
         ModelMapper m = new ModelMapper();
         User u = m.map(dto, User.class);
         String encryptedPassword = passwordEncoder.encode(u.getPasswordUser());
+        u.setPasswordUser(encryptedPassword);
         uS.insert(u);
     }
 

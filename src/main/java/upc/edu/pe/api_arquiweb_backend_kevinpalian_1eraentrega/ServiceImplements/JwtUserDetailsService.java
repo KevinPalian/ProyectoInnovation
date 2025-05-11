@@ -26,6 +26,7 @@ public class JwtUserDetailsService implements UserDetailsService {
         User user = repo.findOneByNameUser(nameUser);
         if (user == null) {
             throw new UsernameNotFoundException(String.format("User not exists", nameUser));
+
         }
         List<GrantedAuthority> roles = new ArrayList<>();
 
