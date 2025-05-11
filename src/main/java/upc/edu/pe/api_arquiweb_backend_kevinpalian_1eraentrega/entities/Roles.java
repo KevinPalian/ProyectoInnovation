@@ -1,52 +1,22 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Table(name = "Roles")
+@Table(name = "roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "rol"})})
+@Getter
+@Setter
 public class Roles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRoles;
-
-    @Column(name = "nameRole",length = 50, nullable = false)
-    private String nameRole;
+    private Long id;
+    @Column(name = "rol", nullable = false, length = 35)
+    private String rol;
 
     @ManyToOne
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
-    public Roles() {
-    }
-
-    public Roles(int idRoles, String nameRole, User user) {
-        this.idRoles = idRoles;
-        this.nameRole = nameRole;
-        this.user = user;
-    }
-
-    public int getIdRoles() {
-        return idRoles;
-    }
-
-    public void setIdRoles(int idRoles) {
-        this.idRoles = idRoles;
-    }
-
-    public String getNameRole() {
-        return nameRole;
-    }
-
-    public void setNameRole(String nameRole) {
-        this.nameRole = nameRole;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }
 
