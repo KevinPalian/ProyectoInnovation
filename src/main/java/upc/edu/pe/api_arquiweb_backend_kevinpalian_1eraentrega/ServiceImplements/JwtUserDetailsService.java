@@ -22,23 +22,11 @@ public class JwtUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //Aqui lógica para buscar el usuario en BD
         //Usuario defecto web:password
-
-<<<<<<< HEAD
         if ("web".equals(username)) {
             return new User("web", "$2a$12$CTtjF8P3IJVK6pP4w9pTxuldMqQRrfrLbLLIlasdu2K6ii2vWGly2",
                     new ArrayList<>());
         } else {
-            throw new UsernameNotFoundException("Usuario no encontrado: " + username);
-=======
-    @Override
-    public UserDetails loadUserByUsername(String nameUser) throws UsernameNotFoundException {
-        User user = repo.findOneByNameUser(nameUser);
-        if (user == null) {
-            throw new UsernameNotFoundException(String.format("User not exists", nameUser));
-
->>>>>>> 5e9f577cf2a1aa05c3d2fef974137009285ca73e
-        }
-    }*/
+            throw new UsernameNotFoundException("Usuario no encontrado: " + username);*/
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = repo.findByUsername(username);
