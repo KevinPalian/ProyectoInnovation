@@ -46,8 +46,13 @@ public class UserController {
     public void insertar(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         User u = m.map(dto, User.class);
+<<<<<<< HEAD
         String encryptedPassword = passwordEncoder.encode(u.getPassword());
         u.setPassword(encryptedPassword);
+=======
+        String encryptedPassword = passwordEncoder.encode(u.getPasswordUser());
+        u.setPasswordUser(encryptedPassword);
+>>>>>>> 5e9f577cf2a1aa05c3d2fef974137009285ca73e
         uS.insert(u);
     }
 

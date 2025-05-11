@@ -26,8 +26,13 @@ public class User implements Serializable {
     @Column(name = "emailUser", length = 250, nullable = false)
     private String emailUser;
 
+<<<<<<< HEAD
     @Column(name = "password", length = 200, nullable = false)
     private String password;
+=======
+    @Column(name = "passwordUser", length = 200, nullable = false)
+    private String passwordUser;
+>>>>>>> 5e9f577cf2a1aa05c3d2fef974137009285ca73e
 
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
