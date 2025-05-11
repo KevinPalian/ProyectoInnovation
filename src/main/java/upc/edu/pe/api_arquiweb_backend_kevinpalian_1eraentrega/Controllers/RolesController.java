@@ -16,30 +16,30 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/roles")
 public class RolesController {
-@Autowired
+    @Autowired
     private IRolesService rR;
-// testeando
-@GetMapping
-private List<RolesDTO> Listar(){
-    return rR.List().stream().map(x->{
-        ModelMapper m = new ModelMapper();
-        return m.map(x,RolesDTO.class);
-    }).collect(Collectors.toList());
-}
+    // testeando
+    @GetMapping
+    private List<RolesDTO> Listar(){
+        return rR.List().stream().map(x->{
+            ModelMapper m = new ModelMapper();
+            return m.map(x,RolesDTO.class);
+        }).collect(Collectors.toList());
+    }
 
-@PostMapping
+    @PostMapping
     public void insertar(@RequestBody RolesDTO dto){
-    ModelMapper m = new ModelMapper();
-    Roles r = m.map(dto,Roles.class);
-    rR.insert(r);
-}
+        ModelMapper m = new ModelMapper();
+        Roles r = m.map(dto,Roles.class);
+        rR.insert(r);
+    }
 
-@GetMapping("/{id}")
+    @GetMapping("/{id}")
     public RolesDTO ListId(@PathVariable("id") int id){
-    ModelMapper m = new ModelMapper();
-    RolesDTO dto= m.map(rR.ListId(id),RolesDTO.class);
-    return dto;
-}
+        ModelMapper m = new ModelMapper();
+        RolesDTO dto= m.map(rR.ListId(id),RolesDTO.class);
+        return dto;
+    }
     @GetMapping("/{idlist}")
     public RolesDTO listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
@@ -65,17 +65,17 @@ private List<RolesDTO> Listar(){
         for(String[]columna:fila){
             UserRoleDTO dto=new UserRoleDTO();
             dto.setNameRole(columna[0]);
-            dto.setNameUser(String.join(columna[1]));//arreglar no entendi join
+            dto.setUsername(String.join(columna[1]));//arreglar no entendi join
             dtoLista.add(dto);
         }
         return dtoLista;
     }
     //@GetMapping("/buscarrol{id}")
-   // public RolesDTO buscarporId(@PathVariable("id") int id) {
-     //   ModelMapper m = new ModelMapper();
-       //aqui se quiere mostrar lo que se puso en el DTO
-        //RolesDTO dto = m.map(rR.listId(id), RolesDTO.class);
-       // return dto;
-   // }
+    // public RolesDTO buscarporId(@PathVariable("id") int id) {
+    //   ModelMapper m = new ModelMapper();
+    //aqui se quiere mostrar lo que se puso en el DTO
+    //RolesDTO dto = m.map(rR.listId(id), RolesDTO.class);
+    // return dto;
+    // }
 
 }
