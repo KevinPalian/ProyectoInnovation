@@ -2,7 +2,7 @@ package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos;
 
 public class UserRoleDTO {
     private String nameRole;
-    private String nameUser;
+    private String username;
 
     public String getNameRole() {
         return nameRole;
@@ -12,11 +12,11 @@ public class UserRoleDTO {
         this.nameRole = nameRole;
     }
 
-    public String getNameUser() {
-        return nameUser;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -13,27 +13,39 @@ import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.repositories.IUse
 import java.util.ArrayList;
 import java.util.List;
 
-
-//Clase 2
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
     @Autowired
     private IUserRepository repo;
 
+    /*@Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        //Aqui lógica para buscar el usuario en BD
+        //Usuario defecto web:password
 
-    @Override
-    public UserDetails loadUserByUsername(String nameUser) throws UsernameNotFoundException {
-        User user = repo.findOneByNameUser(nameUser);
-        if (user == null) {
-            throw new UsernameNotFoundException(String.format("User not exists", nameUser));
+        if ("web".equals(username)) {
+            return new User("web", "$2a$12$CTtjF8P3IJVK6pP4w9pTxuldMqQRrfrLbLLIlasdu2K6ii2vWGly2",
+                    new ArrayList<>());
+        } else {
+            throw new UsernameNotFoundException("Usuario no encontrado: " + username);
         }
+    }*/
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = repo.findByUsername(username);
+
+        if (user == null) {
+            throw new UsernameNotFoundException(String.format("User not exists", username));
+        }
+
         List<GrantedAuthority> roles = new ArrayList<>();
 
-        user.getRoles().forEach(role -> {
-            roles.add(new SimpleGrantedAuthority(role.getNameRole()));
+        user.getRoles().forEach(rol -> {
+            roles.add(new SimpleGrantedAuthority(rol.getRol()));
         });
 
-        UserDetails ud = new org.springframework.security.core.userdetails.User(user.getNameUser(),user.getPasswordUser(), user.getEnabled(), true, true, true, roles);
+        UserDetails ud = new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), user.getEnabled(), true, true, true, roles);
+
         return ud;
     }
 }

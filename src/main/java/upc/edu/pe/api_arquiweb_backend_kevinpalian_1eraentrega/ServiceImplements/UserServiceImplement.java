@@ -43,4 +43,9 @@ public class UserServiceImplement implements IUserService {
         iUserRepository.insertUserRol(user_id, rol_id);
         return 1;
     }
+
+    @Override
+    public User finduser(String username) {
+        return uR.findByUsername(username);
+    }
 }

@@ -65,7 +65,7 @@ private List<RolesDTO> Listar(){
         for(String[]columna:fila){
             UserRoleDTO dto=new UserRoleDTO();
             dto.setNameRole(columna[0]);
-            dto.setNameUser(String.join(columna[1]));//arreglar no entendi join
+            dto.setUsername(String.join(columna[1]));//arreglar no entendi join
             dtoLista.add(dto);
         }
         return dtoLista;

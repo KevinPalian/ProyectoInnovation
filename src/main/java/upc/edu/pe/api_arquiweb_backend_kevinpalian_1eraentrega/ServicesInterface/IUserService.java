@@ -11,4 +11,5 @@ public interface IUserService {
     public User searchbyId(int id);
     public void update(User u);
     public void delete(int id);
+    public User finduser(String username);
 }

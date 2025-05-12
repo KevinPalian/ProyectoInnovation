@@ -1,24 +1,20 @@
 package upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServiceImplements.JwtUserDetailsService;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.securities.JwtRequest;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.securities.JwtResponse;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.securities.JwtTokenUtil;
 
-//Clase 3
 @RestController
-@CrossOrigin
 public class JwtAuthenticationController {
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -27,11 +23,6 @@ public class JwtAuthenticationController {
     @Autowired
     private JwtUserDetailsService userDetailsService;
 
-    public JwtAuthenticationController(AuthenticationManager authenticationManager, JwtTokenUtil jwtTokenUtil, JwtUserDetailsService userDetailsService) {
-        this.authenticationManager = authenticationManager;
-        this.jwtTokenUtil = jwtTokenUtil;
-        this.userDetailsService = userDetailsService;
-    }
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest req) throws Exception {
