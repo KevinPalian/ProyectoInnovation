@@ -43,12 +43,11 @@ public class UserController {
     }
 
     @PostMapping
-    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         User u = m.map(dto, User.class);
-        String encryptedPassword = passwordEncoder.encode(u.getPasswordUser());
-        u.setPasswordUser(encryptedPassword);
+        String encryptedPassword = passwordEncoder.encode(u.getPassword());
+        u.setPassword(encryptedPassword);
         uS.insert(u);
     }
 
@@ -68,5 +67,12 @@ public class UserController {
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {
         uS.delete(id);
+    }
+
+    @GetMapping("/nombreusuario")
+    public UserDTO encontraruser(@RequestParam String nombreuser){
+        ModelMapper m = new ModelMapper();
+        UserDTO dto = m.map(uS.finduser(nombreuser), UserDTO.class);
+        return dto;
     }
 }
