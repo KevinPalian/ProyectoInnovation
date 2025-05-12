@@ -22,15 +22,15 @@ public class UserController {
     @Autowired
     private IUserService uS;
     //@Autowired
-   // private UserServiceImplement userServiceImplement;
+    // private UserServiceImplement userServiceImplement;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-   // @PostMapping("/save/{user_id}/{rol_id}")
-   // public ResponseEntity<Integer> saveUseRol(@PathVariable("user_id") Long user_id,
+    // @PostMapping("/save/{user_id}/{rol_id}")
+    // public ResponseEntity<Integer> saveUseRol(@PathVariable("user_id") Long user_id,
     //                                          @PathVariable("rol_id") Long rol_id){
-      //  return new ResponseEntity<Integer>(userServiceImplement.insertUserRol(user_id, rol_id), HttpStatus.OK);
-        //return new ResponseEntity<Integer>(uService.insertUserRol2(user_id, rol_id),HttpStatus.OK)
+    //  return new ResponseEntity<Integer>(userServiceImplement.insertUserRol(user_id, rol_id), HttpStatus.OK);
+    //return new ResponseEntity<Integer>(uService.insertUserRol2(user_id, rol_id),HttpStatus.OK)
 
     //}
 
@@ -46,8 +46,18 @@ public class UserController {
     public void insertar(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         User u = m.map(dto, User.class);
+<<<<<<< HEAD
         String encryptedPassword = passwordEncoder.encode(u.getPassword());
         u.setPassword(encryptedPassword);
+=======
+<<<<<<< HEAD
+        String encryptedPassword = passwordEncoder.encode(u.getPassword());
+        u.setPassword(encryptedPassword);
+=======
+        String encryptedPassword = passwordEncoder.encode(u.getPasswordUser());
+        u.setPasswordUser(encryptedPassword);
+>>>>>>> 5e9f577cf2a1aa05c3d2fef974137009285ca73e
+>>>>>>> 54313aec8572f0cdfa88f083568bc28328ef4541
         uS.insert(u);
     }
 

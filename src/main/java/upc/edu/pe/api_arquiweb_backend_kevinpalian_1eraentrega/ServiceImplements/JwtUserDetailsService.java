@@ -23,11 +23,26 @@ public class JwtUserDetailsService implements UserDetailsService {
         //Aqui lógica para buscar el usuario en BD
         //Usuario defecto web:password
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 54313aec8572f0cdfa88f083568bc28328ef4541
         if ("web".equals(username)) {
             return new User("web", "$2a$12$CTtjF8P3IJVK6pP4w9pTxuldMqQRrfrLbLLIlasdu2K6ii2vWGly2",
                     new ArrayList<>());
         } else {
             throw new UsernameNotFoundException("Usuario no encontrado: " + username);
+<<<<<<< HEAD
+=======
+=======
+    @Override
+    public UserDetails loadUserByUsername(String nameUser) throws UsernameNotFoundException {
+        User user = repo.findOneByNameUser(nameUser);
+        if (user == null) {
+            throw new UsernameNotFoundException(String.format("User not exists", nameUser));
+
+>>>>>>> 5e9f577cf2a1aa05c3d2fef974137009285ca73e
+>>>>>>> 54313aec8572f0cdfa88f083568bc28328ef4541
         }
     }*/
     @Override
