@@ -5,9 +5,11 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.ComentaryDTO;
+import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.Dtos.QuantityCommentDTO;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.entities.Comentary;
 import upc.edu.pe.api_arquiweb_backend_kevinpalian_1eraentrega.ServicesInterface.IComentaryService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -59,5 +61,22 @@ public class ComentaryController {
         ModelMapper m = new ModelMapper();
         ComentaryDTO dto = m.map(cS.searchById(id), ComentaryDTO.class);
         return dto;
+    }
+
+    @GetMapping("/cantidades")
+    public List<QuantityCommentDTO> obtenerComentarios(){
+        List<QuantityCommentDTO> dtoList = new ArrayList<>();
+        List<String[]> filaList = cS.quantityCommentByUser();
+        for(String[] columna:filaList){
+            QuantityCommentDTO dto = new QuantityCommentDTO();
+            dto.setIdUser(Integer.parseInt(columna[0]));
+            dto.setNameUser(columna[1]);
+            dto.setLastnameUser(columna[2]);
+            dto.setInstitution_codeUser(Integer.parseInt(columna[3]));
+            dto.setQuantityComment(Integer.parseInt(columna[4]));
+            dtoList.add(dto);
+        }
+
+        return dtoList;
     }
 }

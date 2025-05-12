@@ -9,4 +9,5 @@ public interface IComentaryService {
     public void update(Comentary c);
     public void delete(int id);
     public Comentary searchById(int id);
+    public List<String[]> quantityCommentByUser();
 }

@@ -29,4 +29,9 @@ public class ComentaryServiceImplement implements IComentaryService {
     public Comentary searchById(int id) {
         return cR.findById(id).orElse(new Comentary());
     }
+
+    @Override
+    public List<String[]> quantityCommentByUser() {
+        return cR.quantityCommentByUser();
+    }
 }
